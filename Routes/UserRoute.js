@@ -224,4 +224,11 @@ router.get("/me",verifyToken ,async(req,res)=>{
     })
   }
 })
+
+router.get("/verify", verifyToken, (req, res) => {
+  res.json({ 
+    message: "Token is valid", 
+    success : true 
+  });
+});
 export default router;
